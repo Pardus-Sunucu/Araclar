@@ -5,6 +5,6 @@ Bu repo Pardus Sunucu için kullanabileceğiniz bazı paratik pratik araçlar i�
 
 scripts/
 
-* 
+* pardus-sealer.sh
 
 

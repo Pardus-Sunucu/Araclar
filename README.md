@@ -1,2 +1,10 @@
-# Araclar
-Pardus Sunucu için kullanılabilecek pratik araçlar
+# Pardus Sunucu
+## Araçlar
+Bu repo Pardus Sunucu için kullanabileceğiniz bazı paratik pratik araçlar içermektedir.
+
+
+scripts/
+
+* 
+
+

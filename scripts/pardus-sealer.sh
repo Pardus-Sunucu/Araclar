@@ -3,7 +3,7 @@
 #############################
 # Pardus Sealer Script
 # Use before convert a Pardus/Linux installation to template 
-# İbrahim ARI <ibrahim.ari@pardus.org.tr>
+# brahim ARI <ibrahim.ari@pardus.org.tr>
 ##############################
 
 
@@ -61,8 +61,10 @@ rm -rf /var/tmp/*
 rm -f /etc/ssh/ssh_host_*
 
 #add check for ssh keys on reboot...and regenerate if neccessary
+touch /etc/rc.local
 sed -i -e 's|exit 0||' /etc/rc.local
 sed -i -e 's|.*test -f /etc/ssh/ssh_host_dsa_key.*||' /etc/rc.local
+bash -c 'echo "#!/bin/bash" >> /etc/rc.local'
 bash -c 'echo "test -f /etc/ssh/ssh_host_dsa_key || dpkg-reconfigure openssh-server" >> /etc/rc.local'
 bash -c 'echo "exit 0" >> /etc/rc.local'
 chmod a+x /etc/rc.local
